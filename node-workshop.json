@@ -1,0 +1,827 @@
+[
+    {
+        "id": "33bae416.9b10fc",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b485dd20.f6bab",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "5a5de96c.efc6a8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "IoT - UGAL",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6476b75e.b9dbe8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Node 2",
+        "tab": "5a5de96c.efc6a8",
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "fe8ff193.5a1b4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b06e18cd.9b5238",
+        "type": "ui_group",
+        "z": "",
+        "name": "Node 1",
+        "tab": "5a5de96c.efc6a8",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d67fde5.80bf92",
+        "type": "ui_group",
+        "z": "",
+        "name": "Node 3",
+        "tab": "5a5de96c.efc6a8",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "85a30d25.3ce6e",
+        "type": "ui_group",
+        "z": "",
+        "name": "Node 4",
+        "tab": "5a5de96c.efc6a8",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ef3922d0.0bf37",
+        "type": "ui_group",
+        "z": "",
+        "name": "Node 5",
+        "tab": "5a5de96c.efc6a8",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "bc7c7726.506168",
+        "type": "mqtt in",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node2/temp",
+        "qos": "2",
+        "broker": "b485dd20.f6bab",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "1c82394d.09f087",
+                "17339eee.d18ff1"
+            ]
+        ]
+    },
+    {
+        "id": "1c82394d.09f087",
+        "type": "debug",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 400,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "17339eee.d18ff1",
+        "type": "ui_chart",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "group": "b06e18cd.9b5238",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "34",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6501dacb.67a4b4",
+        "type": "ui_switch",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "label": "Status Button",
+        "tooltip": "",
+        "group": "b06e18cd.9b5238",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "80cb7397.89a4"
+            ]
+        ]
+    },
+    {
+        "id": "80cb7397.89a4",
+        "type": "mqtt out",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node2/btn",
+        "qos": "",
+        "retain": "",
+        "broker": "b485dd20.f6bab",
+        "x": 290,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "8edaf5af.9f9778",
+        "type": "ui_colour_picker",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "label": "RGB LED",
+        "group": "b06e18cd.9b5238",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "dynOutput": "false",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "x": 100,
+        "y": 440,
+        "wires": [
+            [
+                "11b75dae.3f1452"
+            ]
+        ]
+    },
+    {
+        "id": "11b75dae.3f1452",
+        "type": "mqtt out",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node2/rgb",
+        "qos": "",
+        "retain": "",
+        "broker": "b485dd20.f6bab",
+        "x": 320,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "658cfa81.178b24",
+        "type": "mqtt in",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node1/temp",
+        "qos": "2",
+        "broker": "b485dd20.f6bab",
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "e3c4c3c5.568a6",
+                "65551fc6.d5761"
+            ]
+        ]
+    },
+    {
+        "id": "e3c4c3c5.568a6",
+        "type": "debug",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 900,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "65551fc6.d5761",
+        "type": "ui_chart",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "group": "6476b75e.b9dbe8",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "34",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 820,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8586ea06.a963b8",
+        "type": "ui_switch",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "label": "Status Button",
+        "tooltip": "",
+        "group": "6476b75e.b9dbe8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 620,
+        "y": 340,
+        "wires": [
+            [
+                "f783aa2e.a8db98"
+            ]
+        ]
+    },
+    {
+        "id": "f783aa2e.a8db98",
+        "type": "mqtt out",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node1/btn",
+        "qos": "",
+        "retain": "",
+        "broker": "b485dd20.f6bab",
+        "x": 790,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "d80d5354.38473",
+        "type": "ui_colour_picker",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "label": "RGB LED",
+        "group": "6476b75e.b9dbe8",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "dynOutput": "false",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "x": 600,
+        "y": 440,
+        "wires": [
+            [
+                "d54463f5.bfd69"
+            ]
+        ]
+    },
+    {
+        "id": "d54463f5.bfd69",
+        "type": "mqtt out",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node1/rgb",
+        "qos": "",
+        "retain": "",
+        "broker": "b485dd20.f6bab",
+        "x": 820,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "e0ecdce6.c188",
+        "type": "mqtt in",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node3/temp",
+        "qos": "2",
+        "broker": "b485dd20.f6bab",
+        "x": 110,
+        "y": 620,
+        "wires": [
+            [
+                "a95c72db.2d0d1",
+                "96cbf9bf.601ae8"
+            ]
+        ]
+    },
+    {
+        "id": "a95c72db.2d0d1",
+        "type": "debug",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 400,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "96cbf9bf.601ae8",
+        "type": "ui_chart",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "group": "d67fde5.80bf92",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "34",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70e88e9f.8d4b9",
+        "type": "ui_switch",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "label": "Status Button",
+        "tooltip": "",
+        "group": "d67fde5.80bf92",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 120,
+        "y": 880,
+        "wires": [
+            [
+                "1d1337f7.435478"
+            ]
+        ]
+    },
+    {
+        "id": "1d1337f7.435478",
+        "type": "mqtt out",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node3/btn",
+        "qos": "",
+        "retain": "",
+        "broker": "b485dd20.f6bab",
+        "x": 290,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "7f82a425.72d4bc",
+        "type": "ui_colour_picker",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "label": "RGB LED",
+        "group": "d67fde5.80bf92",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "dynOutput": "false",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "x": 100,
+        "y": 980,
+        "wires": [
+            [
+                "e0ebcf05.13ef3"
+            ]
+        ]
+    },
+    {
+        "id": "e0ebcf05.13ef3",
+        "type": "mqtt out",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node3/rgb",
+        "qos": "",
+        "retain": "",
+        "broker": "b485dd20.f6bab",
+        "x": 320,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "72fc32ae.598ffc",
+        "type": "mqtt in",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node4/temp",
+        "qos": "2",
+        "broker": "b485dd20.f6bab",
+        "x": 650,
+        "y": 620,
+        "wires": [
+            [
+                "9efde897.b08dc8",
+                "34bc15b2.46b73a"
+            ]
+        ]
+    },
+    {
+        "id": "9efde897.b08dc8",
+        "type": "debug",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 940,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "34bc15b2.46b73a",
+        "type": "ui_chart",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "group": "85a30d25.3ce6e",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "10",
+        "ymax": "34",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 860,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6359439.3242c8",
+        "type": "ui_switch",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "label": "Status Button",
+        "tooltip": "",
+        "group": "85a30d25.3ce6e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "ON",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "OFF",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "x": 660,
+        "y": 880,
+        "wires": [
+            [
+                "6160cfc8.70bd7"
+            ]
+        ]
+    },
+    {
+        "id": "6160cfc8.70bd7",
+        "type": "mqtt out",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node4/btn",
+        "qos": "",
+        "retain": "",
+        "broker": "b485dd20.f6bab",
+        "x": 830,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "389e89e0.5ed496",
+        "type": "ui_colour_picker",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "label": "RGB LED",
+        "group": "85a30d25.3ce6e",
+        "format": "hex",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "dynOutput": "false",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "x": 640,
+        "y": 980,
+        "wires": [
+            [
+                "c0fb3732.49c078"
+            ]
+        ]
+    },
+    {
+        "id": "c0fb3732.49c078",
+        "type": "mqtt out",
+        "z": "33bae416.9b10fc",
+        "name": "",
+        "topic": "/node4/rgb",
+        "qos": "",
+        "retain": "",
+        "broker": "b485dd20.f6bab",
+        "x": 860,
+        "y": 1040,
+        "wires": []
+    }
+]
